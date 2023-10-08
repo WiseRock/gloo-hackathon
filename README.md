@@ -1,6 +1,6 @@
 # Gloo Hackathon
 
-![Wise Connect logo](logo.png)
+![Wise Connect logo](logo_w_bg.png)
 
 ## Application
 
