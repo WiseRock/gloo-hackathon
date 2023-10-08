@@ -87,8 +87,9 @@ dl {
 
 dl > div {
   border: 1px solid var(--border-color);
-  border-radius: 0.8rem;
+  border-radius: 4px;
   background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
+  color: var(--font-with-bg);
   max-width: 24rem;
   padding: 2rem;
   position: relative;
@@ -99,13 +100,17 @@ dl > div:last-child {
 }
 
 dl dt {
-  margin-bottom: 0.8rem;
+  height: 160px;
+  padding-top: 2rem;
+  padding-left: 2rem;
   text-align: center;
 }
 
 dl dt > a {
   color: var(--font-with-bg);
+  display: block;
   font-size: 1.2rem;
+  margin-bottom: 0.8rem;
   text-decoration: none;
 }
 
@@ -113,6 +118,18 @@ dl dt > a:hover {
   color: var(--font-with-bg);
   font-size: 1.2rem;
   text-decoration: underline;
+}
+
+dl dt > p {
+  display: block;
+}
+
+dl dt > img {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: 120px;
+  width: 96px;
 }
 
 dl dd {
