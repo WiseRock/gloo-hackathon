@@ -37,7 +37,7 @@ body > header {
   color: var(--font-with-bg);
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   padding: 0 var(--page-border);
 }
