@@ -27,6 +27,7 @@ body, section, h1, h2, h3, h4, h5, h6, p, ol, ul {
 body > header {
   background: center / contain no-repeat url(logo.png), linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
   height: 60vh;
+  min-height: 500px;
 }
 
 h1, h2, h3, h4, h5, h6 {
