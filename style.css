@@ -7,7 +7,9 @@
   --border-selected: #ddd;
   --about-section-bg: #fff;
   --coach-section-bg: #777;
-  --persona-section-bg: #fff;
+  --partner-section-bg: #fff;
+  --logo-size: 250px;
+  --page-border: 20vw;
 }
 
 html {
@@ -19,66 +21,48 @@ html {
   box-sizing: inherit;
 }
 
-body, section, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body, section, header, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
 }
 
-body > header {
-  background: center / contain no-repeat url(logo.png), linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
-  height: 60vh;
-  min-height: 500px;
-}
-
 h1, h2, h3, h4, h5, h6 {
-  padding: 1.2rem 0 .8rem;
+  margin-bottom: 1.2rem;
   text-align: center;
 }
 
+body > header {
+  background: calc(var(--page-border) - 80px) / contain no-repeat url(logo.png), linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
+  color: var(--font-with-bg);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: var(--logo-size);
+  min-height: var(--logo-size);
+  padding: 4.0rem var(--page-border);
+}
+
 body > header > h1 {
+  height: 0px;
   visibility: hidden;
+}
+
+body > header > h2 {
+  font-size: 2rem;
+  margin-left: var(--logo-size);
 }
 
 section > header,
 section > p,
 section > video,
 section > dl {
-  margin: 0 20vw;
+  margin: 0 var(--page-border);
 }
 
 section {
-  background-color: var(--about-section-bg);
-  padding: 4.0rem 0;
-}
-
-section > p {
-  font-size: larger;
-  line-height: 2rem;
-  text-align: justify;
-}
-
-section + section {
-  background-color: var(--coach-section-bg);
-}
-
-section + section header > h1 {
-  color: var(--font-with-bg);
-  margin: 0 0 2em;
-}
-
-video {
-  max-width: 60vw;
-}
-
-section + section + section {
-  background-color: var(--persona-section-bg);
-  color: va
-}
-
-section + section + section header > h1 {
-  color: var(--font-no-bg);
-  margin: 0 0 2em;
+  background-color: var(--partner-section-bg);
+  padding: 2.0rem 0;
 }
 
 dl {
@@ -132,9 +116,42 @@ dl dd {
   margin: 0;
 }
 
+section + section {
+  background-color: var(--coach-section-bg);
+}
+
+section + section header > h1 {
+  color: var(--font-with-bg);
+}
+
+video {
+  max-width: 60vw;
+}
+
+section + section + section {
+  background-color: var(--about-section-bg);
+}
+
+section + section + section header > h1 {
+  color: var(--font-no-bg);
+  margin: 0 0 2em;
+}
+
+section > p {
+  font-size: larger;
+  line-height: 2rem;
+  margin: 1.2rem --var(--page-border);
+  text-align: justify;
+}
+
 footer {
   background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
   color: var(--font-with-bg);
   padding: 1.2rem 0;
   text-align: center;
+}
+
+section#shadow-host-companion {
+  margin: 0;
+  padding: 0;
 }
