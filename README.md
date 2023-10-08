@@ -1,5 +1,7 @@
 # Gloo Hackathon
 
+![Wise Connect logo](logo.png)
+
 ## Application
 
 Access the website [here](https://wiserock.github.io/gloo-hackathon).
