@@ -4,6 +4,7 @@
   --font-no-bg: #000;
   --font-with-bg: #fff;
   --border-color: #777;
+  --border-selected: #ddd;
   --about-section-bg: #fff;
   --coach-section-bg: #777;
   --persona-section-bg: #fff;
@@ -48,13 +49,12 @@ section > dl {
 
 section {
   background-color: var(--about-section-bg);
-  padding-bottom: 2.0rem;
+  padding: 4.0rem 0;
 }
 
 section > p {
   font-size: larger;
   line-height: 2rem;
-  padding: 2rem 0 0;
   text-align: justify;
 }
 
@@ -64,6 +64,7 @@ section + section {
 
 section + section header > h1 {
   color: var(--font-with-bg);
+  margin: 0 0 2em;
 }
 
 video {
@@ -77,6 +78,7 @@ section + section + section {
 
 section + section + section header > h1 {
   color: var(--font-no-bg);
+  margin: 0 0 2em;
 }
 
 dl {
@@ -85,14 +87,16 @@ dl {
   justify-content: space-evenly;
 }
 
-dl > div {
+dl > a {
   border: 1px solid var(--border-color);
   border-radius: 4px;
   background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
   color: var(--font-with-bg);
-  max-width: 24rem;
+  display: block;
+  max-width: 20rem;
   padding: 2rem;
   position: relative;
+  text-decoration: none;
 }
 
 dl > div:last-child {
@@ -102,26 +106,19 @@ dl > div:last-child {
 dl dt {
   height: 160px;
   padding-top: 2rem;
-  padding-left: 2rem;
+  padding-left: calc(96px + 2rem);
   text-align: center;
 }
 
-dl dt > a {
-  color: var(--font-with-bg);
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 0.8rem;
-  text-decoration: none;
-}
-
-dl dt > a:hover {
-  color: var(--font-with-bg);
-  font-size: 1.2rem;
-  text-decoration: underline;
-}
-
 dl dt > p {
+  color: var(--font-with-bg);
   display: block;
+  font-size: 1.6rem;
+  line-height: 2rem;
+}
+
+dl dt > p + p {
+  font-size: inherit;
 }
 
 dl dt > img {
