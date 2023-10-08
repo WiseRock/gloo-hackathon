@@ -1,0 +1,87 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, section, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+body > header {
+  background: center / contain no-repeat url(logo.png), linear-gradient(to top right, #51a366, #78b98e);
+  height: 60vh;
+}
+
+body > header > h1 {
+  visibility: hidden;
+}
+
+section {
+  background-color: aliceblue;
+  padding-bottom: 2.0em;
+}
+
+section + section {
+  background-color: cornsilk;
+}
+
+section + section + section {
+  background-color: chartreuse;
+}
+
+section > header,
+section > p,
+section > video,
+section > dl {
+  margin: 0 20vw;
+}
+
+section > p {
+  font-size: larger;
+  padding: 2em 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1.2em 0 .8em;
+  text-align: center;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 60vw;
+}
+
+dl > dt {
+  margin-bottom: 0.8em;
+}
+
+dl > dt > a {
+  text-decoration: none;
+}
+
+dl > dd {
+  margin: 0 0 1.2em;
+}
+
+dl > dd:last-child {
+  margin-bottom: 0;
+}
+
+footer {
+  padding: 1.2em 0;
+  text-align: center;
+}
