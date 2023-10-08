@@ -33,24 +33,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body > header {
-  background: calc(var(--page-border) - 80px) / contain no-repeat url(logo.png), linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
+  background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
   color: var(--font-with-bg);
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  height: var(--logo-size);
-  min-height: var(--logo-size);
-  padding: 4.0rem var(--page-border);
+  align-items: center;
+  padding: 0 var(--page-border);
 }
 
 body > header > h1 {
-  height: 0px;
-  visibility: hidden;
+  background: center / contain no-repeat url(logo.png);
+  color: transparent;
+  margin: 0;
+  height: var(--logo-size);
+  min-height: var(--logo-size);
+  width: var(--logo-size);
+  min-width: var(--logo-size);
 }
 
 body > header > h2 {
-  font-size: 2rem;
-  margin-left: var(--logo-size);
+  font-size: 2.0rem;
 }
 
 section > header,
@@ -139,12 +142,13 @@ video + div {
 video + div > p,
 video + div > img {
   max-width: 500px;
+  min-width: 250px;
 }
 
 video + div > p {
   color: var(--font-with-bg);
-  font-size: 2.0em;
-  line-height: 2.4em;
+  font-size: 2.0rem;
+  line-height: 2.4rem;
 }
 
 section + section + section {
@@ -160,7 +164,6 @@ section > p {
   font-size: larger;
   line-height: 2rem;
   margin: 1.2rem --var(--page-border);
-  text-align: justify;
 }
 
 footer {
