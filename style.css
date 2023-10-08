@@ -45,6 +45,7 @@ body > header {
 body > header > h1 {
   background: center / contain no-repeat url(logo.png);
   color: transparent;
+  flex: 1;
   margin: 0;
   height: var(--logo-size);
   min-height: var(--logo-size);
@@ -53,6 +54,7 @@ body > header > h1 {
 }
 
 body > header > h2 {
+  flex: 2;
   font-size: 2.0rem;
 }
 
