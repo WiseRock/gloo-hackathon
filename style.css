@@ -1,3 +1,14 @@
+:root {
+  --bg-gradient-start: #51a366;
+  --bg-gradient-stop: #78b98e;
+  --font-no-bg: #000;
+  --font-with-bg: #fff;
+  --border-color: #777;
+  --about-section-bg: #fff;
+  --coach-section-bg: #777;
+  --persona-section-bg: #fff;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -14,25 +25,17 @@ body, section, h1, h2, h3, h4, h5, h6, p, ol, ul {
 }
 
 body > header {
-  background: center / contain no-repeat url(logo.png), linear-gradient(to top right, #51a366, #78b98e);
+  background: center / contain no-repeat url(logo.png), linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
   height: 60vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 1.2rem 0 .8rem;
+  text-align: center;
 }
 
 body > header > h1 {
   visibility: hidden;
-}
-
-section {
-  background-color: aliceblue;
-  padding-bottom: 2.0em;
-}
-
-section + section {
-  background-color: cornsilk;
-}
-
-section + section + section {
-  background-color: chartreuse;
 }
 
 section > header,
@@ -42,46 +45,83 @@ section > dl {
   margin: 0 20vw;
 }
 
+section {
+  background-color: var(--about-section-bg);
+  padding-bottom: 2.0rem;
+}
+
 section > p {
   font-size: larger;
-  padding: 2em 0 0;
+  line-height: 2rem;
+  padding: 2rem 0 0;
+  text-align: justify;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  padding: 1.2em 0 .8em;
-  text-align: center;
+section + section {
+  background-color: var(--coach-section-bg);
 }
 
-ol, ul {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+section + section header > h1 {
+  color: var(--font-with-bg);
 }
 
 video {
   max-width: 60vw;
 }
 
-dl > dt {
-  margin-bottom: 0.8em;
+section + section + section {
+  background-color: var(--persona-section-bg);
+  color: va
 }
 
-dl > dt > a {
-  text-decoration: none;
+section + section + section header > h1 {
+  color: var(--font-no-bg);
 }
 
-dl > dd {
-  margin: 0 0 1.2em;
+dl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
-dl > dd:last-child {
+dl > div {
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
+  max-width: 24rem;
+  padding: 2rem;
+  position: relative;
+}
+
+dl > div:last-child {
   margin-bottom: 0;
 }
 
+dl dt {
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+dl dt > a {
+  color: var(--font-with-bg);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+dl dt > a:hover {
+  color: var(--font-with-bg);
+  font-size: 1.2rem;
+  text-decoration: underline;
+}
+
+dl dd {
+  color: var(--font-with-bg);
+  margin: 0;
+}
+
 footer {
-  padding: 1.2em 0;
+  background: linear-gradient(to top right, var(--bg-gradient-start), var(--bg-gradient-stop));
+  color: var(--font-with-bg);
+  padding: 1.2rem 0;
   text-align: center;
 }
