@@ -94,14 +94,11 @@ dl > a {
   color: var(--font-with-bg);
   display: block;
   margin-bottom: 2rem;
-  max-width: 20rem;
+  min-width: 320px;
+  width: 320px;
   padding: 2rem;
   position: relative;
   text-decoration: none;
-}
-
-dl > a:last-child {
-  margin-bottom: 0;
 }
 
 dl dt {
